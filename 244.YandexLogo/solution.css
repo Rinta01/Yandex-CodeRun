@@ -1,0 +1,35 @@
+:root {
+    --black: #000;
+    --yellow: linear-gradient(145deg, #fcdd2e, #fcb600);
+    --white: #f5f4f0;
+    --border-radius: 36px;
+}
+
+div {
+    border-radius: var(--border-radius);
+    background: var(--black);
+    position: relative;
+}
+
+div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+    background: var(--yellow);
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+div::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    background: linear-gradient(178deg, rgba(0,0,0,.18) 0px , transparent 7px), var(--white);
+    border-bottom-left-radius: var(--border-radius);
+}
